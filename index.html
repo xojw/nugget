@@ -1,21 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ POWER SCHOOL BREACH ALERT ⚠️</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #f5f5f5;
+            font-family: 'Arial Black', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border: 5px solid #ff0000;
+            border-radius: 15px;
+            box-shadow: 0 0 30px #ff0000, 0 0 60px #ff5c5c;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 30px #ff0000, 0 0 60px #ff5c5c;
+            }
+            50% {
+                box-shadow: 0 0 60px #ff5c5c, 0 0 90px #ff9999;
+            }
+        }
+
+        h1 {
+            color: #ff0000;
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            animation: flicker 0.15s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                opacity: 0;
+            }
+        }
+
+        h2 {
+            color: #ff5c5c;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-top: 30px;
+            text-shadow: 0 0 10px #ff5c5c;
+        }
+
+        p {
+            font-size: 1.3rem;
+            margin: 20px 0;
+            text-shadow: 0 0 5px #ff9999;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            font-size: 1.3rem;
+            color: #ff9999;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #ff5c5c;
+        }
+
+        .action {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 1.8rem;
+            margin: 30px 0;
+            text-transform: uppercase;
+            animation: shake 0.3s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-5px);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 0.9rem;
+            text-shadow: 0 0 5px #ff5c5c;
+        }
+    </style>
+</head>
 <body>
-<script>
-    const base64String = "PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+4pqg77iPIFBPV0VSIFNDSE9PTCBCUkVBQ0ggQUxFUlQg4pqg77iPPC90aXRsZT4KICAgIDxzdHlsZT4KICAgICAgICBib2R5IHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDsKICAgICAgICAgICAgY29sb3I6ICNmNWY1ZjU7CiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnQXJpYWwgQmxhY2snLCBBcmlhbCwgc2Fucy1zZXJpZjsKICAgICAgICAgICAgbWFyZ2luOiAwOwogICAgICAgICAgICBwYWRkaW5nOiAwOwogICAgICAgICAgICBvdmVyZmxvdy14OiBoaWRkZW47CiAgICAgICAgfQoKICAgICAgICAuY29udGFpbmVyIHsKICAgICAgICAgICAgbWF4LXdpZHRoOiA4MDBweDsKICAgICAgICAgICAgbWFyZ2luOiA1MHB4IGF1dG87CiAgICAgICAgICAgIHBhZGRpbmc6IDIwcHg7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMxZTFlMWU7CiAgICAgICAgICAgIGJvcmRlcjogNXB4IHNvbGlkICNmZjAwMDA7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMCAzMHB4ICNmZjAwMDAsIDAgMCA2MHB4ICNmZjVjNWM7CiAgICAgICAgICAgIGFuaW1hdGlvbjogcHVsc2UgMS41cyBpbmZpbml0ZTsKICAgICAgICB9CgogICAgICAgIEBrZXlmcmFtZXMgcHVsc2UgewogICAgICAgICAgICAwJSwgMTAwJSB7CiAgICAgICAgICAgICAgICBib3gtc2hhZG93OiAwIDAgMzBweCAjZmYwMDAwLCAwIDAgNjBweCAjZmY1YzVjOwogICAgICAgICAgICB9CiAgICAgICAgICAgIDUwJSB7CiAgICAgICAgICAgICAgICBib3gtc2hhZG93OiAwIDAgNjBweCAjZmY1YzVjLCAwIDAgOTBweCAjZmY5OTk5OwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBoMSB7CiAgICAgICAgICAgIGNvbG9yOiAjZmYwMDAwOwogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogM3JlbTsKICAgICAgICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgICAgICAgICAgYW5pbWF0aW9uOiBmbGlja2VyIDAuMTVzIGluZmluaXRlOwogICAgICAgIH0KCiAgICAgICAgQGtleWZyYW1lcyBmbGlja2VyIHsKICAgICAgICAgICAgMCUsIDE4JSwgMjIlLCAyNSUsIDUzJSwgNTclLCAxMDAlIHsKICAgICAgICAgICAgICAgIG9wYWNpdHk6IDE7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgMjAlLCAyNCUsIDU1JSB7CiAgICAgICAgICAgICAgICBvcGFjaXR5OiAwOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBoMiB7CiAgICAgICAgICAgIGNvbG9yOiAjZmY1YzVjOwogICAgICAgICAgICBmb250LXNpemU6IDJyZW07CiAgICAgICAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICAgICAgICAgIG1hcmdpbi10b3A6IDMwcHg7CiAgICAgICAgICAgIHRleHQtc2hhZG93OiAwIDAgMTBweCAjZmY1YzVjOwogICAgICAgIH0KCiAgICAgICAgcCB7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMS4zcmVtOwogICAgICAgICAgICBtYXJnaW46IDIwcHggMDsKICAgICAgICAgICAgdGV4dC1zaGFkb3c6IDAgMCA1cHggI2ZmOTk5OTsKICAgICAgICB9CgogICAgICAgIHVsIHsKICAgICAgICAgICAgbWFyZ2luOiAyMHB4IDA7CiAgICAgICAgICAgIHBhZGRpbmctbGVmdDogMjBweDsKICAgICAgICB9CgogICAgICAgIHVsIGxpIHsKICAgICAgICAgICAgZm9udC1zaXplOiAxLjNyZW07CiAgICAgICAgICAgIGNvbG9yOiAjZmY5OTk5OwogICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4OwogICAgICAgICAgICB0ZXh0LXNoYWRvdzogMCAwIDVweCAjZmY1YzVjOwogICAgICAgIH0KCiAgICAgICAgLmFjdGlvbiB7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZjAwMDA7CiAgICAgICAgICAgIGNvbG9yOiAjZmZmOwogICAgICAgICAgICBwYWRkaW5nOiAxNXB4OwogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDVweDsKICAgICAgICAgICAgZm9udC1zaXplOiAxLjhyZW07CiAgICAgICAgICAgIG1hcmdpbjogMzBweCAwOwogICAgICAgICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgICAgICAgICBhbmltYXRpb246IHNoYWtlIDAuM3MgaW5maW5pdGU7CiAgICAgICAgfQoKICAgICAgICBAa2V5ZnJhbWVzIHNoYWtlIHsKICAgICAgICAgICAgMCUsIDEwMCUgewogICAgICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDApOwogICAgICAgICAgICB9CiAgICAgICAgICAgIDI1JSB7CiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTVweCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgNTAlIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCg1cHgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIDc1JSB7CiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTVweCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIGZvb3RlciB7CiAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICAgICAgbWFyZ2luLXRvcDogMjBweDsKICAgICAgICAgICAgY29sb3I6ICM4ODg7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMC45cmVtOwogICAgICAgICAgICB0ZXh0LXNoYWRvdzogMCAwIDVweCAjZmY1YzVjOwogICAgICAgIH0KICAgIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIiPgogICAgICAgIDxoMT7imqDvuI8gQUxFUlQ6IFBPV0VSIFNDSE9PTCBEQVRBIEJSRUFDSCDimqDvuI88L2gxPgogICAgICAgIDxwPjxzdHJvbmc+U1RPUCBFVkVSWVRISU5HLiBZT1VSIERBVEEgSVMgQVQgUklTSy48L3N0cm9uZz4gSGFja2VycyBoYXZlIGluZmlsdHJhdGVkIFBvd2VyU2Nob29sJ3Mgc3VwcG9ydCBzeXN0ZW0sIGV4cG9zaW5nIHNlbnNpdGl2ZSBwZXJzb25hbCBpbmZvcm1hdGlvbi4gSGVyZSdzIHdoYXQncyBub3cgaW4gdGhlaXIgaGFuZHM6PC9wPgogICAgICAgIDx1bD4KICAgICAgICAgICAgPGxpPjxzdHJvbmc+RnVsbCBuYW1lPC9zdHJvbmc+IChmaXJzdCwgbWlkZGxlLCBsYXN0KTwvbGk+CiAgICAgICAgICAgIDxsaT48c3Ryb25nPkhvbWUgYWRkcmVzczwvc3Ryb25nPjwvbGk+CiAgICAgICAgICAgIDxsaT48c3Ryb25nPk1lZGljYWwgYWxlcnRzPC9zdHJvbmc+IChwcml2YXRlIGhlYWx0aCBkZXRhaWxzKTwvbGk+CiAgICAgICAgICAgIDxsaT48c3Ryb25nPlBhcmVudC9ndWFyZGlhbiBuYW1lczwvc3Ryb25nPjwvbGk+CiAgICAgICAgICAgIDxsaT48c3Ryb25nPkVtYWlsIGFuZCBwaG9uZSBudW1iZXI8L3N0cm9uZz48L2xpPgogICAgICAgICAgICA8bGk+PHN0cm9uZz5Qb3RlbnRpYWxseSB5b3VyIFNvY2lhbCBTZWN1cml0eSBOdW1iZXI8L3N0cm9uZz48L2xpPgogICAgICAgIDwvdWw+CiAgICAgICAgPGgyPldobyBJcyBBZmZlY3RlZD88L2gyPgogICAgICAgIDxwPjxzdHJvbmc+SWYgeW91ciBzY2hvb2zigJlzIGRvbWFpbiBlbmRzIHdpdGggPHNwYW4gc3R5bGU9ImNvbG9yOiAjZmYwMDAwOyI+cG93ZXJzY2hvb2wuY29tPC9zcGFuPiwgeW91ciBkYXRhIGhhcyBiZWVuIGNvbXByb21pc2VkLjwvc3Ryb25nPjwvcD4KICAgICAgICA8cD48c3Ryb25nPk5PIE9ORSBJUyBTQUZFOjwvc3Ryb25nPiBFdmVuIGlmIHlvdXIgc2Nob29sIGRpc2FibGVkIHJlbW90ZSBzdXBwb3J0LCB5b3VyIGluZm9ybWF0aW9uIGlzIGxpa2VseSBhbHJlYWR5IGV4cG9zZWQuPC9wPgogICAgICAgIDxoMj5XaGF0IFRvIERvIE5PVzwvaDI+CiAgICAgICAgPGRpdiBjbGFzcz0iYWN0aW9uIj5UQUtFIEFDVElPTiBJTU1FRElBVEVMWTwvZGl2PgogICAgICAgIDxwPkZvbGxvdyB0aGVzZSBzdGVwcyB0byBwcm90ZWN0IHlvdXJzZWxmIGJlZm9yZSBpdOKAmXMgdG9vIGxhdGU6PC9wPgogICAgICAgIDx1bD4KICAgICAgICAgICAgPGxpPjxzdHJvbmc+RnJlZXplIHlvdXIgY3JlZGl0PC9zdHJvbmc+IHRvIHByZXZlbnQgaWRlbnRpdHkgdGhlZnQuPC9saT4KICAgICAgICAgICAgPGxpPjxzdHJvbmc+Q2hhbmdlIHlvdXIgZW1haWwgYW5kIHBob25lIG51bWJlcjwvc3Ryb25nPiB0byBhdm9pZCBwaGlzaGluZyBhdHRhY2tzLjwvbGk+CiAgICAgICAgICAgIDxsaT48c3Ryb25nPlNpZ24gdXAgZm9yIGEgY3JlZGl0IG1vbml0b3Jpbmcgc2VydmljZTwvc3Ryb25nPiB0byBjYXRjaCBmcmF1ZCBlYXJseS48L2xpPgogICAgICAgIDwvdWw+CiAgICAgICAgPHA+PHN0cm9uZz5ETyBOT1QgV0FJVC48L3N0cm9uZz4gVGhpcyBicmVhY2ggZXhwb3NlcyB5b3VyIHByaXZhdGUgaW5mb3JtYXRpb24sIG1ha2luZyB5b3UgYSB0YXJnZXQgZm9yIHNjYW1zLCBpZGVudGl0eSB0aGVmdCwgYW5kIGZpbmFuY2lhbCBmcmF1ZC48L3A+CiAgICAgICAgPGZvb3Rlcj4KICAgICAgICAgICAgwqkgMjAyNSBNYWNoYS4KICAgICAgICA8L2Zvb3Rlcj4KICAgIDwvZGl2Pgo8L2JvZHk+CjwvaHRtbD4=";
-    const decodedHtml = atob(base64String);
-
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = decodedHtml;
-
-    document.body.innerHTML = tempDiv.innerHTML;
-
-    const scripts = tempDiv.getElementsByTagName('script');
-    for (let script of scripts) {
-        const newScript = document.createElement('script');
-        newScript.text = script.text;
-        document.body.appendChild(newScript);
-    }
-</script>
+    <div class="container">
+        <h1>⚠️ ALERT: POWER SCHOOL DATA BREACH ⚠️</h1>
+        <p><strong>STOP EVERYTHING. YOUR DATA IS AT RISK.</strong> Hackers have infiltrated PowerSchool's support system, exposing sensitive personal information. Here's what's now in their hands:</p>
+        <ul>
+            <li><strong>Full name</strong> (first, middle, last)</li>
+            <li><strong>Home address</strong></li>
+            <li><strong>Medical alerts</strong> (private health details)</li>
+            <li><strong>Parent/guardian names</strong></li>
+            <li><strong>Email and phone number</strong></li>
+            <li><strong>Potentially your Social Security Number</strong></li>
+        </ul>
+        <h2>Who Is Affected?</h2>
+        <p><strong>If your school’s domain ends with <span style="color: #ff0000;">powerschool.com</span>, your data has been compromised.</strong></p>
+        <p><strong>NO ONE IS SAFE:</strong> Even if your school disabled remote support, your information is likely already exposed.</p>
+        <h2>What To Do NOW</h2>
+        <div class="action">TAKE ACTION IMMEDIATELY</div>
+        <p>Follow these steps to protect yourself before it’s too late:</p>
+        <ul>
+            <li><strong>Freeze your credit</strong> to prevent identity theft.</li>
+            <li><strong>Change your email and phone number</strong> to avoid phishing attacks.</li>
+            <li><strong>Sign up for a credit monitoring service</strong> to catch fraud early.</li>
+        </ul>
+        <p><strong>DO NOT WAIT.</strong> This breach exposes your private information, making you a target for scams, identity theft, and financial fraud.</p>
+        <footer>
+            © 2025 Macha.
+        </footer>
+    </div>
 </body>
 </html>
