@@ -14,7 +14,7 @@
     "dependencies": {
         "compression": "^1.7.5",
         "express": "^4.21.2",
-        "node-fetch": "^3.3.2",
+        "node-fetch": "^3.3.2"
     },
     "devDependencies": {
         "eslint": "^8.36.0",
