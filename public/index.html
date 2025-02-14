@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>I love nuggets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <script>
+        window.onload = () => {
+            let inFrame;
+            try {
+                inFrame = window !== top;
+            } catch (e) {
+                inFrame = true;
+            }
+            if (inFrame) return;
+            const popup = window.open("", "_blank");
+            if (!popup || popup.closed) {
+                alert("Failed to load automask. Please allow popups and try again.");
+                return;
+            }
+            popup.document.head.innerHTML = `
+                <title>🌊 Google</title>
+                <link rel="icon" href="https://www.google.com/favicon.ico">
+            `;
+            popup.document.body.innerHTML = `
+                <iframe style="height: 100%; width: 100%; border: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0;" src="/nugget.html">
+                </iframe>
+            `;
+            window.location.replace("https://bisd.schoology.com/home");
+        };
+    </script>
 </head>
 <body>
-<script>
-(function() {
-    const defaultTitle = "🌊 Google";
-    const defaultIcon = "https://www.google.com/favicon.ico";
-    const defaultSrc = "about:blank";
-
-    const popup = window.open("", "_blank");
-    if (!popup || popup.closed) {
-        alert("Failed to load automask. Please allow popups and try again.");
-        return;
-    }
-
-    popup.document.head.innerHTML = `
-        <title>${defaultTitle}</title>
-        <link rel="icon" href="${defaultIcon}">
-    `;
-    popup.document.body.innerHTML = `
-        <iframe 
-            id="autoIframe"
-            style="height: 100%; width: 100%; border: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0;" 
-            src="${defaultSrc}">
-        </iframe>
-    `;
-
-    const userUrl = prompt("Enter URL to display in the iframe:");
-    if (!userUrl) {
-        alert("No URL provided. Exiting script.");
-        return;
-    }
-
-    const iframe = popup.document.getElementById("autoIframe");
-    iframe.src = userUrl;
-
-    // Optionally, redirect the main window to another URL.
-    window.location.replace("https://bisd.schoology.com/home");
-})();
-</script>
 </body>
 </html>
