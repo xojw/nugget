@@ -19,12 +19,7 @@ clear
 export PATH="$HOME/bin:$PATH"
 export CADDY_MAX_ON_DEMAND_CERTS=0
 
-highlight "██╗    ██╗ █████╗ ██╗   ██╗███████╗███████╗"
-highlight "██║    ██║██╔══██╗██║   ██║██╔════╝██╔════╝"
-highlight "██║ █╗ ██║███████║██║   ██║█████╗  ███████╗"
-highlight "██║███╗██║██╔══██║╚██╗ ██╔╝██╔══╝  ╚════██║"
-highlight "╚███╔███╔╝██║  ██║ ╚████╔╝ ███████╗███████║██╗"
-highlight " ╚══╝╚══╝ ╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚══════╝╚═╝"
+highlight "Nugetssssss"
 separator
 
 info "Starting the setup process..."
