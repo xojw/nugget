@@ -1,71 +1,64 @@
 import express from "express";
 import { createServer } from "node:http";
-import wisp from "wisp-server-node";
-import compression from 'compression';
+import compression from "compression";
 import { hostname } from "node:os";
 import { fileURLToPath } from "url";
 import chalk from "chalk";
-import routes from './src/routes.js';
+import routes from "./src/routes.js";
 
 const publicPath = fileURLToPath(new URL("./public/", import.meta.url));
 
 const app = express();
 app.use(express.static(publicPath));
-app.use('/', routes);
+app.use("/", routes);
 
 app.use(
   compression({
-    level: 1, 
-    threshold: 0, 
+    level: 1,
+    threshold: 0,
     filter: () => true,
     memLevel: 1,
-    strategy: 1, 
-    windowBits: 9, 
+    strategy: 1,
+    windowBits: 9,
   })
 );
 
 let port = parseInt(process.env.PORT || "3000");
 
-const server = createServer();
-
-server.on("request", (req, res) => {
-  if (req.url === "/w/") {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("hi");
-  } else {
-    app(req, res);
-  }
-});
-
-server.on('upgrade', (req, socket, head) => {
-  if (req.url.endsWith('/w/')) {
-    wisp.routeRequest(req, socket, head);
-  } else {
-    socket.end();
-  }
-});
+const server = createServer(app);
 
 server.on("listening", () => {
   const address = server.address();
   if (address && typeof address === "object") {
-    console.log(chalk.bold.blue(`
+    console.log(
+      chalk.bold.blue(`
 ██╗    ██╗ █████╗ ██╗   ██╗███████╗███████╗   
 ██║    ██║██╔══██╗██║   ██║██╔════╝██╔════╝   
 ██║ █╗ ██║███████║██║   ██║█████╗  ███████╗   
 ██║███╗██║██╔══██║╚██╗ ██╔╝██╔══╝  ╚════██║   
 ╚███╔███╔╝██║  ██║ ╚████╔╝ ███████╗███████║██╗
  ╚══╝╚══╝ ╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚══════╝╚═╝                                          
-    `));
+    `)
+    );
 
     console.log(chalk.bold.green(`🟡 Server starting...`));
     console.log(chalk.bold.green(`🟢 Server started successfully!`));
-    console.log(chalk.green(`🔗 Hostname: `) + chalk.bold(`http://${hostname()}:${address.port}`));
-    console.log(chalk.green(`🔗 LocalHost: `) + chalk.bold(`http://localhost:${address.port}`));
-    console.log(chalk.green('🕒 Time: ') + chalk.bold.magenta(new Date().toLocaleTimeString()));
-    console.log(chalk.green('📅 Date: ') + chalk.bold.magenta(new Date().toLocaleDateString()));
-    console.log(chalk.green('💻 Platform: ') + chalk.bold.yellow(process.platform));
-    console.log(chalk.green('📶 Server Status: ') + chalk.bold.green('Running'));
-    console.log(chalk.red('🔴 Do ctrl + c to shut down the server.'));
+    console.log(
+      chalk.green(`🔗 Hostname: `) +
+        chalk.bold(`http://${hostname()}:${address.port}`)
+    );
+    console.log(
+      chalk.green(`🔗 LocalHost: `) + chalk.bold(`http://localhost:${address.port}`)
+    );
+    console.log(
+      chalk.green("🕒 Time: ") + chalk.bold.magenta(new Date().toLocaleTimeString())
+    );
+    console.log(
+      chalk.green("📅 Date: ") + chalk.bold.magenta(new Date().toLocaleDateString())
+    );
+    console.log(chalk.green("💻 Platform: ") + chalk.bold.yellow(process.platform));
+    console.log(chalk.green("📶 Server Status: ") + chalk.bold.green("Running"));
+    console.log(chalk.red("🔴 Do ctrl + c to shut down the server."));
   } else {
     console.error(chalk.bold.red("❌ Server failed to start."));
   }
