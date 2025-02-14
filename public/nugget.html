@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuggetttss</title>
+  <style>
+    * { margin: 0; padding: 0; border: 0; }
+    html, body { width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; }
+    #searchBar { padding: 10px; text-align: center; background: #222; }
+    #searchInput { width: 80%; padding: 8px; }
+    #iframeContainer { flex: 1; }
+    iframe { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <div id="searchBar">
+    <input id="searchInput" type="text" placeholder="Enter URL and press Enter">
+  </div>
+  <div id="iframeContainer">
+    <iframe id="browserFrame"></iframe>
+  </div>
+  <script>
+    const input = document.getElementById("searchInput");
+    const frame = document.getElementById("browserFrame");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        let url = input.value.trim();
+        if (!url.startsWith("http://") && !url.startsWith("https://")) {
+          url = "https://" + url;
+        }
+        frame.src = url;
+      }
+    });
+  </script>
+</body>
+</html>
